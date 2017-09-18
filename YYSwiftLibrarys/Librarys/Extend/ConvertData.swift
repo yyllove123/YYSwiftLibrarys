@@ -11,9 +11,6 @@ import Foundation
 extension Data {
     
     func getUInt16Bytes(_ buffer: inout UInt16, range: NSRange) {
-        
-        
-        
         let count = range.length / MemoryLayout<UInt8>.size
         // create array of appropriate length:
         var bytes = [UInt8](repeating: 0, count: count)

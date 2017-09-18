@@ -20,6 +20,14 @@ class SecondViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func showWindowHudButtonPressed(_ sender: Any) {
+        
+        self.showViewHUD(type: HUDType.hotwheels, msg: nil, detailMsg: nil, progress: nil)
+    }
+    
+    @IBAction func hiddenWindowHudButtonPressed(_ sender: Any) {
+        self.hiddenHUD()
+    }
 
 }
 

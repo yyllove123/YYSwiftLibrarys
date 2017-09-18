@@ -3,3 +3,5 @@
 //
 
 #import <CommonCrypto/CommonDigest.h>
+
+#import <MBProgressHUD/MBProgressHUD.h>
