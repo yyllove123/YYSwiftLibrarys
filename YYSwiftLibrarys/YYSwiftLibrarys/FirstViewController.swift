@@ -25,17 +25,26 @@ class FirstViewController: UIViewController {
     @IBAction func showSelfHudButtonPressed(_ sender: Any) {
         
         self.showSelfViewHUD(type: HUDType.hotwheels, msg: nil, detailMsg: nil, progress: nil)
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + DispatchTimeInterval.seconds(3)) { [unowned self] in
+            
+            self.hiddenHUD()
+        }
     }
     
     @IBAction func hiddenSelfHudButtonPressed(_ sender: Any) {
-        self.hiddenHUD()
+        self.showViewHUD(type: HUDType.hotwheels, msg: nil, detailMsg: nil, progress: nil)
+        DispatchQueue.main.asyncAfter(deadline: .now() + DispatchTimeInterval.seconds(3)) { [unowned self] in
+            
+            self.hiddenHUD()
+        }
     }
 
     @IBAction func buttonPressed(_ sender: Any) {
         
         
         
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime(uptimeNanoseconds: 10000000)) { [unowned self] in
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime(uptimeNanoseconds: 10_000_000)) { [unowned self] in
             self.hiddenHUD()
         }
     }

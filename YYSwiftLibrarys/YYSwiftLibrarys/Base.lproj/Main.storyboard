@@ -36,7 +36,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="DXf-Ws-t7e"/>
                                 </constraints>
-                                <state key="normal" title="hiddenSelfHud"/>
+                                <state key="normal" title="showWindowHud"/>
                                 <connections>
                                     <action selector="hiddenSelfHudButtonPressed:" destination="9pv-A4-QxB" eventType="touchUpInside" id="WSg-l9-4Bx"/>
                                 </connections>
@@ -89,9 +89,6 @@
                                     <constraint firstAttribute="height" constant="30" id="N2q-eF-OxD"/>
                                 </constraints>
                                 <state key="normal" title="showWindowHUD"/>
-                                <connections>
-                                    <action selector="buttonPressed:" destination="9pv-A4-QxB" eventType="touchUpInside" id="dvI-1J-hDb"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hpp-90-oHc">
                                 <rect key="frame" x="195.5" y="28" width="163.5" height="30"/>
@@ -99,9 +96,6 @@
                                     <constraint firstAttribute="height" constant="30" id="xj5-wm-EdS"/>
                                 </constraints>
                                 <state key="normal" title="hiddenWindowHUD"/>
-                                <connections>
-                                    <action selector="buttonPressed:" destination="9pv-A4-QxB" eventType="touchUpInside" id="jCJ-pB-4GK"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

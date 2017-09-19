@@ -25,6 +25,9 @@ fileprivate class ControllerHUDs {
     
     var huds: [String : MBProgressHUD] = [:]
     
+    var gifView: UIView?
+    
+    
     func queryHUD(id: String, controller: UIViewController?) -> MBProgressHUD {
         
         guard let hud = huds[id] else {
@@ -92,9 +95,15 @@ extension UIViewController {
         ControllerHUDs.sharedInstance.removeHUD(id: "\(self)")
     }
     
+    static func setCustomGifView(view: UIView?) {
+        ControllerHUDs.sharedInstance.gifView = view
+    }
+    
     private func queryHud(type: HUDType, msg: String?, detailMsg: String?, progress: Float?, inWindow: Bool) -> MBProgressHUD {
         
         let hud = ControllerHUDs.sharedInstance.queryHUD(id: "\(self)", controller: inWindow ? nil : self)
+        
+        hud.customView = nil
         
         switch type {
         case .hotwheels:
@@ -117,6 +126,7 @@ extension UIViewController {
             hud.label.text = msg
             hud.detailsLabel.text = detailMsg
             hud.mode = .customView
+            hud.customView = ControllerHUDs.sharedInstance.gifView
             break
         }
         
