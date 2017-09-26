@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Helvetica.ttc">
+            <string>Helvetica</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--First-->
         <scene sceneID="hNz-n2-bh7">
@@ -41,22 +46,39 @@
                                     <action selector="hiddenSelfHudButtonPressed:" destination="9pv-A4-QxB" eventType="touchUpInside" id="WSg-l9-4Bx"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7T2-jQ-43z" customClass="CaptchaButton" customModule="YYSwiftLibrarys" customModuleProvider="target">
+                                <rect key="frame" x="16" y="83" width="136" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.8015174866" blue="0.79992699619999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="8Vh-Vk-rFT"/>
+                                    <constraint firstAttribute="width" constant="136" id="jko-0Y-pTw"/>
+                                </constraints>
+                                <state key="normal" title="获取验证码"/>
+                                <connections>
+                                    <action selector="queryCaptchaButtonPressed:" destination="9pv-A4-QxB" eventType="touchUpInside" id="EeI-qF-phg"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="tLm-8K-2hT" firstAttribute="leading" secondItem="Fx1-oA-aJI" secondAttribute="trailing" constant="16" id="5jd-kj-zeB"/>
                             <constraint firstItem="Fx1-oA-aJI" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="16" id="6Qd-Wu-G17"/>
+                            <constraint firstItem="7T2-jQ-43z" firstAttribute="top" secondItem="Fx1-oA-aJI" secondAttribute="bottom" constant="17" id="Abk-cZ-nJQ"/>
                             <constraint firstItem="tLm-8K-2hT" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="16" id="C7d-Dx-3dL"/>
                             <constraint firstAttribute="trailing" secondItem="tLm-8K-2hT" secondAttribute="trailing" constant="16" id="ImY-5o-PKy"/>
                             <constraint firstItem="tLm-8K-2hT" firstAttribute="width" secondItem="Fx1-oA-aJI" secondAttribute="width" id="Q4h-qK-uaP"/>
+                            <constraint firstItem="7T2-jQ-43z" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" constant="16" id="Q6A-wt-6QR"/>
                             <constraint firstItem="Fx1-oA-aJI" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" constant="16" id="oMS-Lo-gr6"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
+                    <connections>
+                        <outlet property="queryCaptchaButton" destination="7T2-jQ-43z" id="nj7-bd-gbJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="833" y="-378"/>
+            <point key="canvasLocation" x="1086" y="-384"/>
         </scene>
         <!--Second-->
         <scene sceneID="wg7-f3-ORb">

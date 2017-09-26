@@ -23,8 +23,8 @@ import UIKit
  }
  */
 
-extension UIView {
-    func convertToImage() -> UIImage {
+public extension UIView {
+    public func convertToImage() -> UIImage {
         let s = self.bounds.size
         UIGraphicsBeginImageContextWithOptions(s, false, UIScreen.main.scale)
         self.layer.render(in: UIGraphicsGetCurrentContext()!)
@@ -33,33 +33,4 @@ extension UIView {
         
         return image!
     }
-}
-
-extension UIColor {
-    
-    func toImage() -> UIImage {
-        
-        let rect = CGRect(x: 0, y: 0, width: 1, height: 1)
-        UIGraphicsBeginImageContext(rect.size)
-        let context = UIGraphicsGetCurrentContext()
-        context!.setFillColor(self.cgColor)
-        context!.fill(rect)
-        let image = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        return image!
-    }
-    
-    /*
-     - (UIImage*) createImageWithColor: (UIColor*) color
-     {
-     CGRect rect=CGRectMake(0,0, 1, 1);
-     UIGraphicsBeginImageContext(rect.size);
-     CGContextRef context = UIGraphicsGetCurrentContext();
-     CGContextSetFillColorWithColor(context, [color CGColor]);
-     CGContextFillRect(context, rect);
-     UIImage *theImage = UIGraphicsGetImageFromCurrentImageContext();
-     UIGraphicsEndImageContext();
-     return theImage;
-     }
- */
 }

@@ -11,7 +11,7 @@
 import Foundation
 import UIKit
 
-enum HUDType: Int {
+public enum HUDType: Int {
     case hotwheels
     case progress
     case onlyMsg
@@ -56,7 +56,7 @@ fileprivate class ControllerHUDs {
     
 }
 
-extension UIViewController {
+public extension UIViewController {
     
     /// 在当前viewcontroller上面显示hud
     ///
@@ -65,7 +65,7 @@ extension UIViewController {
     ///   - msg: 大标题
     ///   - detailMsg: 详细内容
     ///   - progress: 进度
-    func showSelfViewHUD(type: HUDType, msg: String?, detailMsg: String?, progress: Float?) {
+    public func showSelfViewHUD(type: HUDType, msg: String?, detailMsg: String?, progress: Float?) {
         
         let hud = queryHud(type: type, msg: msg, detailMsg: detailMsg, progress: progress, inWindow: false)
         
@@ -80,7 +80,7 @@ extension UIViewController {
     ///   - msg: 大标题
     ///   - detailMsg: 详细内容
     ///   - progress: 进度
-    func showViewHUD(type: HUDType, msg: String?, detailMsg: String?, progress: Float?) {
+    public func showViewHUD(type: HUDType, msg: String?, detailMsg: String?, progress: Float?) {
         let hud = queryHud(type: type, msg: msg, detailMsg: detailMsg, progress: progress, inWindow: true)
         
         UIApplication.shared.keyWindow!.addSubview(hud)
@@ -89,13 +89,13 @@ extension UIViewController {
     
     
     /// 隐藏HUD
-    func hiddenHUD() {
+    public func hiddenHUD() {
         let hud = ControllerHUDs.sharedInstance.queryHUD(id: "\(self)", controller: self)
         hud.hide(animated: true)
         ControllerHUDs.sharedInstance.removeHUD(id: "\(self)")
     }
     
-    static func setCustomGifView(view: UIView?) {
+    public static func setCustomGifView(view: UIView?) {
         ControllerHUDs.sharedInstance.gifView = view
     }
     

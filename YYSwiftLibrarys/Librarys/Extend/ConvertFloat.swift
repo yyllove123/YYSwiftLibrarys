@@ -8,14 +8,14 @@
 
 import Foundation
 
-extension Float {
+public extension Float {
     
     
     /// 字符串转换 默认不会五舍六入
     ///
     /// - Parameter index: 小数点后面保留几位, nil为默认, 在6以及6以下
     /// - Returns: 转换的字符串
-    func string(index: UInt?) -> String {
+    public func string(index: UInt?) -> String {
         
         return self.string(index: index, roundUp: false)
     }
@@ -27,7 +27,7 @@ extension Float {
     ///   - index: 小数点后面保留几位, nil为默认, 在6以及6以下
     ///   - roundUp: 是否五舍六入
     /// - Returns: 转换的字符串
-    func string(index: UInt?, roundUp: Bool) -> String {
+    public func string(index: UInt?, roundUp: Bool) -> String {
         
         if index == nil {
             return String(format: "%f", self)

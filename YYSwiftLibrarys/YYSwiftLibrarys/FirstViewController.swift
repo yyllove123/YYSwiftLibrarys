@@ -10,16 +10,22 @@ import UIKit
 
 class FirstViewController: UIViewController {
 
+    @IBOutlet weak var queryCaptchaButton: CaptchaButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        
+        queryCaptchaButton.timerTitle = "剩余"
+        queryCaptchaButton.maxTimerCount = 10
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func queryCaptchaButtonPressed(_ sender: Any) {
+        
     }
     
     @IBAction func showSelfHudButtonPressed(_ sender: Any) {

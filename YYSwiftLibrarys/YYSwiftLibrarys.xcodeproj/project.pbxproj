@@ -51,6 +51,12 @@
 		65F29A261F6F64090037FFEB /* CovertFloatSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F29A251F6F64090037FFEB /* CovertFloatSwiftTests.swift */; };
 		65F29A281F6F9F8C0037FFEB /* ViewController+HUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F29A271F6F9F8C0037FFEB /* ViewController+HUD.swift */; };
 		65F29A291F6F9F8C0037FFEB /* ViewController+HUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F29A271F6F9F8C0037FFEB /* ViewController+HUD.swift */; };
+		65F29A2D1F70B1CE0037FFEB /* UIColorExtend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F29A2C1F70B1CE0037FFEB /* UIColorExtend.swift */; };
+		65F29A2E1F70B1CE0037FFEB /* UIColorExtend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F29A2C1F70B1CE0037FFEB /* UIColorExtend.swift */; };
+		65F29A2F1F70B1CE0037FFEB /* UIColorExtend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F29A2C1F70B1CE0037FFEB /* UIColorExtend.swift */; };
+		65F29A311F70B3E10037FFEB /* UIColorExtendOCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F29A301F70B3E10037FFEB /* UIColorExtendOCTests.m */; };
+		65F29A361F70B92E0037FFEB /* CaptchaButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F29A351F70B92E0037FFEB /* CaptchaButton.swift */; };
+		65F29A371F70B92E0037FFEB /* CaptchaButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F29A351F70B92E0037FFEB /* CaptchaButton.swift */; };
 		6D232B1321B5D7D580FE8CCA /* libPods-YYSwiftLibrarysTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0492A0C28EE3A66A854AC6D1 /* libPods-YYSwiftLibrarysTests.a */; };
 		E9298BA15A8D3F1A3980CA0F /* libPods-YYSwiftLibrarys.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BF1B2799497E08032BF7CB21 /* libPods-YYSwiftLibrarys.a */; };
 /* End PBXBuildFile section */
@@ -103,6 +109,9 @@
 		65F29A1F1F6F62460037FFEB /* YYSwiftLibrarysUITests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "YYSwiftLibrarysUITests-Bridging-Header.h"; path = "../YYSwiftLibrarys/YYSwiftLibrarysUITests-Bridging-Header.h"; sourceTree = "<group>"; };
 		65F29A251F6F64090037FFEB /* CovertFloatSwiftTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CovertFloatSwiftTests.swift; sourceTree = "<group>"; };
 		65F29A271F6F9F8C0037FFEB /* ViewController+HUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController+HUD.swift"; sourceTree = "<group>"; };
+		65F29A2C1F70B1CE0037FFEB /* UIColorExtend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtend.swift; sourceTree = "<group>"; };
+		65F29A301F70B3E10037FFEB /* UIColorExtendOCTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIColorExtendOCTests.m; sourceTree = "<group>"; };
+		65F29A351F70B92E0037FFEB /* CaptchaButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaptchaButton.swift; sourceTree = "<group>"; };
 		82BBE7F1E6504F6A94C6EE9C /* Pods-YYSwiftLibrarysTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YYSwiftLibrarysTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YYSwiftLibrarysTests/Pods-YYSwiftLibrarysTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A6DDB794097E82FEF339DA7D /* Pods-YYSwiftLibrarysUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YYSwiftLibrarysUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-YYSwiftLibrarysUITests/Pods-YYSwiftLibrarysUITests.release.xcconfig"; sourceTree = "<group>"; };
 		ABF596AF6A4B5B4D74371088 /* Pods-YYSwiftLibrarysUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YYSwiftLibrarysUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YYSwiftLibrarysUITests/Pods-YYSwiftLibrarysUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -185,6 +194,7 @@
 				65F29A251F6F64090037FFEB /* CovertFloatSwiftTests.swift */,
 				65F299D51F6F60DF0037FFEB /* Info.plist */,
 				65F29A1E1F6F62460037FFEB /* YYSwiftLibrarysTests-Bridging-Header.h */,
+				65F29A301F70B3E10037FFEB /* UIColorExtendOCTests.m */,
 			);
 			path = YYSwiftLibrarysTests;
 			sourceTree = "<group>";
@@ -202,6 +212,7 @@
 		65F299EC1F6F620C0037FFEB /* Librarys */ = {
 			isa = PBXGroup;
 			children = (
+				65F29A341F70B9190037FFEB /* CaptchButton */,
 				65F299ED1F6F620C0037FFEB /* Alert */,
 				65F299EF1F6F620C0037FFEB /* CircleView */,
 				65F299F11F6F620C0037FFEB /* Extend */,
@@ -236,6 +247,7 @@
 				65F299F61F6F620C0037FFEB /* NSDateExtend.swift */,
 				65F299F71F6F620C0037FFEB /* UIView_ConvertToImage.swift */,
 				65F29A271F6F9F8C0037FFEB /* ViewController+HUD.swift */,
+				65F29A2C1F70B1CE0037FFEB /* UIColorExtend.swift */,
 			);
 			path = Extend;
 			sourceTree = "<group>";
@@ -248,6 +260,14 @@
 				65F299FB1F6F620C0037FFEB /* ResponseDataFilter.swift */,
 			);
 			path = Request;
+			sourceTree = "<group>";
+		};
+		65F29A341F70B9190037FFEB /* CaptchButton */ = {
+			isa = PBXGroup;
+			children = (
+				65F29A351F70B92E0037FFEB /* CaptchaButton.swift */,
+			);
+			path = CaptchButton;
 			sourceTree = "<group>";
 		};
 		83EAB18F0F912968D1096292 /* Pods */ = {
@@ -572,7 +592,9 @@
 				65F29A1A1F6F620C0037FFEB /* ResponseDataFilter.swift in Sources */,
 				65F29A0E1F6F620C0037FFEB /* NSDateExtend.swift in Sources */,
 				65F29A141F6F620C0037FFEB /* Request.swift in Sources */,
+				65F29A2D1F70B1CE0037FFEB /* UIColorExtend.swift in Sources */,
 				65F29A171F6F620C0037FFEB /* RequestType.swift in Sources */,
+				65F29A361F70B92E0037FFEB /* CaptchaButton.swift in Sources */,
 				65F29A111F6F620C0037FFEB /* UIView_ConvertToImage.swift in Sources */,
 				65F299C11F6F60DF0037FFEB /* SecondViewController.swift in Sources */,
 				65F29A051F6F620C0037FFEB /* ConvertFloat.swift in Sources */,
@@ -594,9 +616,11 @@
 				65F29A261F6F64090037FFEB /* CovertFloatSwiftTests.swift in Sources */,
 				65F29A061F6F620C0037FFEB /* ConvertFloat.swift in Sources */,
 				65F29A001F6F620C0037FFEB /* CircleView.swift in Sources */,
+				65F29A2E1F70B1CE0037FFEB /* UIColorExtend.swift in Sources */,
 				65F29A091F6F620C0037FFEB /* ConvertString.swift in Sources */,
 				65F299FD1F6F620C0037FFEB /* Alert.swift in Sources */,
 				65F29A121F6F620C0037FFEB /* UIView_ConvertToImage.swift in Sources */,
+				65F29A311F70B3E10037FFEB /* UIColorExtendOCTests.m in Sources */,
 				65F29A0F1F6F620C0037FFEB /* NSDateExtend.swift in Sources */,
 				65F29A151F6F620C0037FFEB /* Request.swift in Sources */,
 				65F29A181F6F620C0037FFEB /* RequestType.swift in Sources */,
@@ -620,9 +644,11 @@
 				65F299DF1F6F60DF0037FFEB /* YYSwiftLibrarysUITests.swift in Sources */,
 				65F29A161F6F620C0037FFEB /* Request.swift in Sources */,
 				65F29A191F6F620C0037FFEB /* RequestType.swift in Sources */,
+				65F29A371F70B92E0037FFEB /* CaptchaButton.swift in Sources */,
 				65F29A0D1F6F620C0037FFEB /* Crypto.swift in Sources */,
 				65F29A1C1F6F620C0037FFEB /* ResponseDataFilter.swift in Sources */,
 				65F29A041F6F620C0037FFEB /* ConvertData.swift in Sources */,
+				65F29A2F1F70B1CE0037FFEB /* UIColorExtend.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
