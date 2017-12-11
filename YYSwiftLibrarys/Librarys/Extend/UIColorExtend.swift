@@ -28,10 +28,11 @@ public extension UIColor {
         
         if (cString.hasPrefix("#")) {
             let index = cString.index(cString.startIndex, offsetBy:1)
+            
             cString = cString.substring(from: index)
         }
         
-        if (cString.characters.count != 6) {
+        if (cString.count != 6) {
             return UIColor.red
         }
         

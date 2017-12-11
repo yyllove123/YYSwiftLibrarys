@@ -42,10 +42,10 @@ class CircleView: UIView {
                 layer.strokeColor = color.cgColor
                 self.layer.addSublayer(layer)
                 
-                let path = UIBezierPath(arcCenter: CGPoint(x: self.bounds.size.width, y: self.bounds.size.height), radius: CGFloat((self.bounds.size.width-progressWidth)/2), startAngle: startAngle, endAngle: startAngle + CGFloat(M_PI * 2 * progress / total), clockwise: true)
+                let path = UIBezierPath(arcCenter: CGPoint(x: self.bounds.size.width, y: self.bounds.size.height), radius: CGFloat((self.bounds.size.width-progressWidth)/2), startAngle: startAngle, endAngle: startAngle + CGFloat(Double.pi * 2 * progress / total), clockwise: true)
                 layer.path = path.cgPath
                 
-                startAngle += CGFloat(M_PI * 2 * progress / total)
+                startAngle += CGFloat(Double.pi * 2 * progress / total)
             }
         }
         
