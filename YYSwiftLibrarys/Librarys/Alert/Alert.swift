@@ -10,11 +10,19 @@ import UIKit
 
 struct Alert {
     static func showErrorAlert(_ title: String?, message: String?) {
-        UIAlertView(title: title, message: message, delegate: nil, cancelButtonTitle: "确定").show()
+        let alertcontroller = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        
+        alertcontroller.addAction(UIAlertAction(title: "确定", style: .cancel, handler: nil))
+        
+        if let rootController = UIApplication.shared.keyWindow?.rootViewController {
+            rootController.present(alertcontroller, animated: true, completion: nil)
+        }
+        else {
+            print("window.rootViewController is nil")
+        }
     }
     
     static func showError(_ error: NSError) {
-//        UIAlertView(title: error.domain, message: "\(error)", delegate: nil, cancelButtonTitle: "取消").show()
-        UIAlertView(title: nil, message: "\(error)", delegate: nil, cancelButtonTitle: "取消").show()
+        Alert.showErrorAlert(nil, message: "\(error)")
     }
 }

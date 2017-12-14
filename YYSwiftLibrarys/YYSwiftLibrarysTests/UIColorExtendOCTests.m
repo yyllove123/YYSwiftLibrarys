@@ -8,6 +8,7 @@
 
 #import <XCTest/XCTest.h>
 #import "YYSwiftLibrarysTests-Swift.h"
+#import <UIKit/UIKit.h>
 
 @interface UIColorExtendOCTests : XCTestCase
 

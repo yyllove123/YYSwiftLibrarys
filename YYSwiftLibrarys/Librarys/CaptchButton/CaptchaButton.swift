@@ -8,6 +8,11 @@
 
 import UIKit
 
+protocol CaptchaButtonDelegate {
+    func beginTimer(button: CaptchaButton)
+    func endTimer(button: CaptchaButton)
+}
+
 class CaptchaButton: UIButton {
 
     override func addTarget(_ target: Any?, action: Selector, for controlEvents: UIControlEvents) {
@@ -21,17 +26,23 @@ class CaptchaButton: UIButton {
     
     @objc var maxTimerCount: Int = 60
     @objc var normalTitle: String = "获取验证码"
-    @objc var timerTitle:String = ""
+    @objc var timerFirstTitle: String = ""
+    @objc var timerLastTitle: String = "秒"
+    
+    var delegate: CaptchaButtonDelegate?
     
     
     private var beginDate: Date?
     private var timer: Timer?
-    
+    private var isBegining: Bool = false
     
     @objc private func beginTimer() {
         beginDate = Date()
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(CaptchaButton.requeryCaptchaTimer), userInfo: nil, repeats: true)
         self.isEnabled = false
+        
+        isBegining = true
+        delegate?.beginTimer(button: self)
     }
     
     @objc private func requeryCaptchaTimer() {
@@ -42,7 +53,7 @@ class CaptchaButton: UIButton {
                 resetButton()
             }
             else {
-                self.setTitle("\(timerTitle)\(count)秒", for: UIControlState.normal)
+                self.setTitle("\(timerFirstTitle)\(count)\(timerLastTitle)", for: UIControlState.normal)
             }
         }
         else {
@@ -58,6 +69,11 @@ class CaptchaButton: UIButton {
         
         self.isEnabled = true
         self.setTitle(normalTitle, for: UIControlState.normal)
+        
+        if isBegining {
+            delegate?.endTimer(button: self)
+        }
+        isBegining = false
     }
     
     /*

@@ -44,7 +44,7 @@ public extension Float {
 //             let index = String.Index(index!)
             
             let pointAfterStr = components[1]
-            return components[0] + "." + components[1].substring(to: pointAfterStr.index(pointAfterStr.startIndex, offsetBy: String.IndexDistance(index!)))
+            return components[0] + "." + components[1][..<pointAfterStr.index(pointAfterStr.startIndex, offsetBy: String.IndexDistance(index!))]
 
         }
     }

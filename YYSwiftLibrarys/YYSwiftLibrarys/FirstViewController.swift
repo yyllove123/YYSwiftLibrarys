@@ -15,8 +15,10 @@ class FirstViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        queryCaptchaButton.timerTitle = "剩余"
+        queryCaptchaButton.timerFirstTitle = "剩余"
         queryCaptchaButton.maxTimerCount = 10
+        
+        let color = UIColor.color(hexStr: "#001122")
     }
 
     override func didReceiveMemoryWarning() {
